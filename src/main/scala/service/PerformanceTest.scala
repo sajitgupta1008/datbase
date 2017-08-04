@@ -3,6 +3,7 @@ package service
 import Database.Database
 import Models.QueryTest
 import org.apache.log4j.Logger
+
 class PerformanceTest(database: Database) {
 
   private val logger = Logger.getLogger(this.getClass)
@@ -27,8 +28,9 @@ class PerformanceTest(database: Database) {
     }
 
     dbConnection.close()
-logger.info("connection closed")
+    logger.info("connection closed")
     output
+
   }
 
 
@@ -48,6 +50,7 @@ logger.info("connection closed")
     }
 
     combinedOutput
+
   }
 
 }

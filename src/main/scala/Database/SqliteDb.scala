@@ -10,6 +10,7 @@ class  SqliteDb extends Database {
   override def connectToDatabase(): Connection = {
     Class.forName(driver)
     DriverManager.getConnection(url)
+
   }
 
 
