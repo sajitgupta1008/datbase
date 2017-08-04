@@ -14,7 +14,7 @@ class CsvHandler {
   private val two = 2
   private val three = 3
   private val four = 4
-  private val OUTPUT_DIR = "/home/knoldus/out/"
+  private val OUTPUT_DIR = "src/test/output/"
 
   def readCsv(filePath: String): List[QueryTest] = {
 

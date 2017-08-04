@@ -3,9 +3,9 @@ import service.{CsvHandler, PerformanceTest}
 
 object testApp extends App {
 
-  val MYSQLFILE = "/home/knoldus/CSV/MySQLDDL.csv"
-  val POSTGRESFILE = "/home/knoldus/CSV/PostgreSQLDDL.csv"
-  val SQLITEFILE = "/home/knoldus/CSV/SQLiteDDL.csv"
+  val MYSQLFILE = "src/test/resources/MySQLDDL.csv"
+  val POSTGRESFILE = "src/test/resources/PostgreSQLDDL.csv"
+  val SQLITEFILE = "src/test/resources/SQLiteDDL.csv"
 
 
   val testMysql = new PerformanceTest(new MySqlDb)
@@ -18,6 +18,6 @@ object testApp extends App {
 
   val combinedOutput = testSqlite.generateOutputFiles(MYSQLFILE, mysqlOutput, POSTGRESFILE, postgresOutput, SQLITEFILE, sqliteOutput)
 
-  new CsvHandler().writeCsv("/home/knoldus/out/final.csv", combinedOutput)
+  new CsvHandler().writeCsv("src/test/output/final.csv", combinedOutput)
 
 }

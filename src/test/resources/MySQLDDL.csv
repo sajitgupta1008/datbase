@@ -1,0 +1,4 @@
+1, Creating Employee table, DROP TABLE IF EXISTS Employee;, "CREATE TABLE Employee(name VARCHAR(20), EmployeeID INT, zipcode INT, PhoneNo BIGINT);", DROP TABLE Employee;
+2, Altering Employee table by adding EmployeeAge column, "DROP TABLE IF EXISTS Employee; CREATE TABLE Employee(name VARCHAR(20), EmployeeID INT, zipcode INT, PhoneNo BIGINT);", "alter table Employee  ADD (EmployeeAge INT);", DROP TABLE Employee;
+3, Dropping Employee table, "DROP TABLE IF EXISTS Employee; CREATE TABLE Employee(name VARCHAR(20), EmployeeID INT, zipcode INT, PhoneNo BIGINT);", "drop table Employee;", DROP TABLE IF EXISTS Employee;
+4, Renaming table Employee to Worker, "DROP TABLE IF EXISTS Employee; DROP TABLE IF EXISTS Worker; CREATE TABLE Employee(name VARCHAR(20), EmployeeID INT, zipcode INT, PhoneNo BIGINT);", "alter table Employee rename to Worker;", DROP TABLE IF EXISTS Worker;
